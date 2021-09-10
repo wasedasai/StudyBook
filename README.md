@@ -1,4 +1,5 @@
 # StudyBook
+![gif](https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif?cid=ecf05e47bhbdz7hr6xgdcp5nzgdokl0gbzm3qw4o1g6qsx5p&rid=giphy.gif&ct=g)
 ## [Chapter1 Developer](1.md)
 第一章では、開発者としての心構えとこれから取り組むことのロードマップを確認し、基本的な用語を学習します。この章の最終ゴールは、開発者としての基本的知識を備えることです。
 
