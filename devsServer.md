@@ -1,59 +1,23 @@
 # Server
-この章では、インフラの構成、サーバーの負荷と基本的なサーバーの取り扱いについて学びます。
+この章では、インフラ、サーバーの負荷と基本的なサーバーの取り扱いについて学びます。
 
-![chapter5](https://user-images.githubusercontent.com/65198192/132814224-2319bebf-9103-4233-a55c-29cfa545cbcb.png)
+![devsServer-hero](https://user-images.githubusercontent.com/65198192/143469543-83c96ba4-103f-44d5-bbda-ca5a64b8a948.png)
 
-## 第一節 コンポーネント指向
-### :dizzy:コンポーネント指向とは
-まずはコンポーネント指向について学びます。コンポーネントとは部品のことです。
+## 第一節 インフラ
+### インフラとは
+インフラは水道・電気・ガスなどの私たちの生活を支える基盤ですが、IT分野（特にWEB）では、インフラはサーバー、データベース、OSやネットワーク構成などのサービスを支える技術群のことを指します。
 
-例えばフッターはサイトの大半のページにおいて共通です。そこでフッターを部品としてあらかじめ定義しておきます。
-```javaScript
-# app/components/Footer.js
+以下ではWEBサービスを支えるインフラを紹介します。
 
-export const Footer = () => {
-  return (
-    <footer>
-      <div class="footer-inner">
-        <h2>早稲田祭2021</h2>
-        <ul class="footerNav">
-          <li>Page1</li>
-          <li>Page2</li>
-          <li>Page3</li>
-          <li>Page4</li>
-        </ul>
-      </div>
-    </footer>
-  );
-}
-```
-`Footer`コンポーネントを`import`して使います！
-```javaScript
-# app/index.js
+#### :dizzy: サーバー
+あるサービスを提供するものをサーバーと言います。（例えば水を提供するウォーターサーバー）
 
-from "./components/Footer" import Footer
+いわゆるIT分野におけるサーバーは、一般的なPCでも代用可能です。しかし、私たちのPCは大量のユーザーをさばけるほど高性能ではありませんし、壊れてしまえば修復するのに何週間もかかる可能性もあります。そこで専用のコンピュータを用意するのが通常です。
 
-const app = () => {
-  return (
-    <header>
-      <div class="footer-inner">
-        <h2>早稲田祭2021</h2>
-        <ul class="footerNav">
-          <li>Page1</li>
-          <li>Page2</li>
-          <li>Page3</li>
-          <li>Page4</li>
-        </ul>
-      </div>
-    </header>
-    
-    <main>Hello World!!</main>
-    
-    <Footer />
-  );
-}
-```
-`<header>~</header>`と`<Footer />`を見比べてください。コンポーネントならとっても簡単に使いまわせると思いませんか？
+:warning:ややこしいことにサーバーとは、サーバールームにある巨大装置のことを指すだけではありません。WEBサイトやWEBアプリを提供するWEBサーバー、データベースサーバー、メールサーバー、ファイルサーバーなどがあります。
+
+#### :dizzy: OS
+OSとはOperating Systemのことですが、
 
 :warning:いつもVSCodeの補完機能に頼ってるので、この書き方で正しかったか不安です。あくまでもコンポーネント理解のためなので、コーディング時に参考にしないでください。（追記：これはReactでの書き方で、Vueと全然違いました。比較を下の方でしています。）
 
