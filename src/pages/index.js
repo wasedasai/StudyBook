@@ -1,30 +1,59 @@
 import React from "react"
-import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import { graphql, Link } from "gatsby"
+import styled from "styled-components"
 
-export default ({ data }) => {
-  const node = data.allMarkdownRemark.edges[0].node;
-
+export default function Home({ data }) {
   return (
     <div>
-      <h1>{node.frontmatter.title}</h1>
-      <h2>{node.frontmatter.date}</h2>
-      <div dangerouslySetInnerHTML={{ __html: node.html }} />
+      <Layout>
+        <HeroMessageBox>
+          <div>
+            <SiteName>Study Book</SiteName>
+            <SiteScript>Webチームで学ぶことをまごころをこめて書いたサイト</SiteScript>
+          </div>
+        </HeroMessageBox>
+        {data.allMarkdownRemark.nodes.map(node => (
+          <div key={node.frontmatter.id}>
+            <Link to={node.fields.slug}>
+              {node.frontmatter.title}
+            </Link>
+          </div>
+        ))}
+      </Layout>
     </div>
   )
 }
 
+const HeroMessageBox = styled.div`
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const SiteName = styled.h1`
+  font-size: 60px;
+  text-align: center;
+`
+
+const SiteScript = styled.div`
+  font-weight: bold;
+  text-align: center;
+`
+
 export const query = graphql`
-  query {
+  {
     allMarkdownRemark {
-      totalCount
-      edges {
-        node {
+      nodes {
+        html
+        fields {
+          slug
+        }
+        frontmatter {
+          title,
           id
-          frontmatter {
-            title
-            date(formatString: "DD MMMM, YYYY")
-          }
-          html
         }
       }
     }

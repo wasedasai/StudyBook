@@ -6,13 +6,14 @@ module.exports = {
     siteUrl: `https://https://org.wasedasai.net/StudyBook/`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
+        name: `textbook`,
+        path: `${__dirname}/textbook/`,
       },
     },
     `gatsby-transformer-sharp`,
