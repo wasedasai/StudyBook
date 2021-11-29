@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `StudyBook`,
-    description: `Webチームで学ぶことを心をこめて書いたレポジトリ`,
+    description: `Webチームで学ぶことを心をこめて書いたサイト`,
     author: `@akinori`,
-    siteUrl: `https://https://org.wasedasai.net/StudyBook/`,
+    siteUrl: `https://org.wasedasai.net/StudyBook/public`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
