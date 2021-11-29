@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-post-js",
-    "path": "/report/",
-    "result": {"data":{"markdownRemark":{"html":"<h1>引き継ぎ</h1>\n<h2>MEMO</h2>\n<p>とりあえず、箇条書きでひたすら書く</p>\n<ul>\n<li>仮サイトは例年のテンプレを使う。（ある程度）</li>\n<li>Vue使うならjQueryは使わない方がいい</li>\n<li>仮想DOMとリアルDOM。無限スクロール</li>\n<li>サーバー担当最低3人</li>\n<li>当日ほぼシフトなしを上記から2人が常駐</li>\n<li>10個以上のデータはスプシで共有</li>\n<li>文字数の制限</li>\n<li></li>\n</ul>\n<h2>各コンテンツ概要</h2>\n<ul>\n<li>サイト説明</li>\n<li>注意事項</li>\n<li>分析</li>\n<li>スケジュール</li>\n<li>当日</li>\n<li>採用技術</li>\n<li>フロントエンド</li>\n<li>バックエンド</li>\n</ul>\n<h2>コンテンツ</h2>\n<h3>完成サイト</h3>\n<h3>注意事項</h3>\n<h3>スケジュール</h3>\n<h3>当日</h3>\n<h3>採用技術</h3>\n<h3>フロントエンド</h3>\n<h3>バックエンド</h3>","frontmatter":{"title":"Report"}}},"pageContext":{"slug":"/report/"}},
-    "staticQueryHashes": ["3649515864"]}
