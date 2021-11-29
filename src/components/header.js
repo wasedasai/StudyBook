@@ -12,7 +12,6 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </SiteTitleLink>
     </SiteTitle>
-    <Generations>for the next generation</Generations>
   </Container>
 )
 
@@ -39,11 +38,6 @@ const SiteTitle = styled.h1`
 const SiteTitleLink = styled(Link)`
   color: white;
   text-decoration: none
-`
-
-const Generations = styled.div`
-  font-size: 12px;
-  color: white;
 `
 
 export default Header
