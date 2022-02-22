@@ -148,9 +148,9 @@ $ nodenv global <Version>
 ```
 
 ### :dizzy:Windows
-WindowsではNode.jsのバージョンを管理するためにnodistを使います。
+~~WindowsではNode.jsのバージョンを管理するためにnodistを使います。~~
 
-[nodistでNode.jsをバージョン管理](https://qiita.com/satoyan419/items/56e0b5f35912b9374305)を読んで頑張ってください。この記事の「Node.jsのインストール」まで完了してください。
+開発が停止しているNodistではなく、nvmを用いるので、[こちらの記事](https://nodejs.keicode.com/nodejs/how-to-use-nvm-windows.php)をみてnvmをインストールしてください。
 
 :warning:Node.jsはチーム指定のバージョンを入力してください。それ以外は最新バージョンで問題ありません。
 
