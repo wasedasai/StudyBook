@@ -131,3 +131,273 @@ console.log(4000 * 108 / 100)
 ```
 
 もし関数を利用しなかった場合は、変更に弱くなります。例えば消費税が15%や30%に引き上げられた場合は、関数を利用しない例では全行を変更する必要があります。一方で関数を利用すれば、変更が必要になるのは1行のみです。
+
+## 配列
+JavaScriptには配列があります。配列とは同じ型のデータを格納できるものです。配列は下記のように表すことができます。
+```js
+const arrayNum = [100, 300, 240, 360];
+```
+このarray配列には、100, 300, 240, 360という数値が格納されています。
+
+それぞれの配列の要素を表示させたい場合は、以下のようにします。
+```js
+console.log(arrayNum[0]) // 100が表示されます
+console.log(arrayNum[1]) // 300が表示されます
+console.log(arrayNum[2]) // 240が表示されます
+console.log(arrayNum[3]) // 360が表示されます
+```
+この配列をすべて表示させたい場合は、以下のようにします。
+```js
+// 表示方法１
+arrayNum.forEach((number) => {
+	console.log(number);
+});
+
+// 表示方法２
+for (let i = 0; i < arrayNum.length; i ++) {
+	console.log(arrayNum[i]);
+}
+```
+配列にはオブジェクトというものも格納できます。簡単なオブジェクトの例です。
+```js
+// サンプル１
+const person1 = {
+	name: "akino",
+	age: 20,
+	height: 175, 
+}
+
+// サンプル２
+const book1 = {
+	title: "hacking Lab",
+	language: "jp",
+	type: "book",
+}
+```
+オブジェクトが格納された配列のサンプルです。
+```js
+const EVENTS_LIST = [
+	{name: "fes1", time: "12:00~12:15", place: "campus1"},
+	{name: "fes2", time: "12:00~12:15", place: "campus4"},
+	{name: "fes3", time: "13:00~14:45", place: "campus2"},
+	{name: "fes4", time: "10:00~12:00", place: "campus3"},
+	{name: "fes5", time: "11:00~12:00", place: "campus1"},
+];
+```
+
+### チャレンジ
+1. EVENTS_LIST配列からplaceが`campus4`であるeventが格納された配列を作成してください。
+2. 「fes1は12:00~12:15にcampus1で開催されます」のように、すべてのイベントをログで表示できるようにしてください。
+
+## JavaScriptでHTMLを操作
+### 1 基本
+index.htmlを作成し、index.htmlを下記のようにします。deferをつけることでHTML表示後にcomponents.jsを実行することができます。
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page1</title>
+  <script src="./components.js" defer></script>
+</head>
+<body>
+</body>
+</html>
+```
+index2.htmlを追加してください。（headのtitleだけindex.htmlと異なります。）
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page2</title>
+  <script src="./components.js" defer></script>
+</head>
+<body>
+</body>
+</html>
+```
+さらにcomponents.jsを作成して、このようにします。
+```js
+// index.htmlのbody要素を取得します。
+const body = document.body;
+
+// Header関数を定義します。"Header()"で実行できます。
+const Header = () => {
+  return `<header>Header</header>`
+}
+
+// body要素にafterbegin（直後に）、"<header>Header</header>"を追加します。
+body.insertAdjacentHTML('afterbegin', Header());
+```
+これでindex.htmlとindex2.htmlをリロードすれば、画面にHeaderという文字が表示されます。これがJavaScriptでHTMLを操作することであり、Header関数はコンポーネント（部品）となります。
+
+従来はindex.htmlもindex2.htmlもbody要素内は、下のように記述しなければなりませんでしたが、JavaScriptでHTMLを操作することで、面倒な記述を減らすことができます。
+```html
+<body>
+	<header>Header</header>
+</body>
+```
+ヘッダーに”Header”と表示するのではなく、”祭”と表示してみてください。Header関数を書き換えればokです。わざわざindex.htmlとindex2.htmlを変更する必要はありません。これがコンポーネントが変化に強い理由です。
+### 2 スタイル
+HEADER_STYLESを定義して、テキストを中心揃えに大きく太くしてみました。
+```jsx
+const body = document.body;
+
+const Header = () => {
+  const HEADER_STYLES = "text-align:center;font-size:20px;font-weight:900;"
+  return `<header style=${HEADER_STYLES}>祭</header>`
+}
+
+body.insertAdjacentHTML('afterbegin', Header());
+```
+
+「`」で囲まれた文字列の中で、変数・定数を展開したい場合は、「${}」を用いましょう。
+
+### 3 動的なテキスト
+ヘッダーはどこでも同じように表示されるコンポーネントですが、ボタンは違います。ある時はボタンは「キャンセル」と、またある時は「送信」と表示されます。
+
+そこで、下記にすることでボタンの文字を可変にします。
+```js
+const body = document.body;
+
+const Button = (children) => {
+  return `<button>${children}</button>`
+}
+
+body.insertAdjacentHTML('afterbegin', Button("キャンセル"));
+body.insertAdjacentHTML('afterbegin', Button("送信"));
+```
+ここではchildrenという引数にキャンセルと送信という文字列が渡され、それが展開されています。このように文字を可変にします。
+
+### 4 動的なスタイル
+引数を用いることで、スタイルを動的に変更できます。ボタンの背景色を動的にしてみます。
+```js
+const body = document.body;
+
+const Button = (children, backgroundColor) => {
+  const BUTTON_STYLES = `background-color:${backgroundColor};`
+  return `<button style=${BUTTON_STYLES}>${children}</button>`
+}
+
+body.insertAdjacentHTML('beforeend', Button("キャンセル", "white"));
+body.insertAdjacentHTML('beforeend', Button("送信", "green"));
+```
+キャンセルの時は背景を白に、送信の時は背景を緑色に表示するようにしてみました。childrenやbackgroundColorという引数は、コンポーネントではProps（プロップス）と呼ばれます。
+
+ところで背景が緑色だと文字が見づらいので、特定の色の時はテキストを白色にしてみましょう。
+```js
+const body = document.body;
+
+const Button = (children, backgroundColor) => {
+	// BUTTON_STYLESはこの後変更するのでletで変数として定義する
+  let BUTTON_STYLES = `background-color:${backgroundColor};`
+
+	// backgroundColorが配列の要素に含まれるか
+  if (["black", "green", "red"].includes(backgroundColor)) {
+	// 含まれるときはテキストを白色にする
+    BUTTON_STYLES += "color:white;"
+  }
+
+  return `<button style=${BUTTON_STYLES}>${children}</button>`
+}
+
+body.insertAdjacentHTML('beforeend', Button("キャンセル", "white"));
+body.insertAdjacentHTML('beforeend', Button("送信", "green"));
+body.insertAdjacentHTML('beforeend', Button("中止", "red"));
+```
+せっかくなのでHeaderコンポーネントにお問い合わせボタンを追加してみましょう
+```js
+const body = document.body;
+
+const Header = () => {
+  const HEADER_STYLES = "text-align:center;font-size:20px;font-weight:900;"
+  return `<header style=${HEADER_STYLES}>祭${Button("お問い合わせ")}</header>`
+}
+
+const Button = (children, backgroundColor) => {
+  let BUTTON_STYLES = `background-color:${backgroundColor};`
+
+  if (["black", "green", "red"].includes(backgroundColor)) {
+    BUTTON_STYLES += "color:white;"
+  }
+
+  return `<button style=${BUTTON_STYLES}>${children}</button>`
+}
+
+body.insertAdjacentHTML('beforeend', Header());
+```
+
+### 5 ページを作成する
+ここまででコンポーネントの基本を学習してきましたが、これではindex.htmlとindex2.htmlで表示される内容が同じです。コンポーネントを利用しながら、ページごとに表示される内容を変えてみましょう。
+
+まずはcomponents.jsを下記のようにします。新たにParagraphというコンポーネントを追加しました。
+```js
+const body = document.body;
+
+const Header = () => {
+  return `<header style="text-align:center;font-size:20px;font-weight:900;">祭</header>`
+}
+
+const Paragraph = (children) => {
+  return `<p style="font-size:16px;text-align:center">${children}</p>`
+}
+```
+次にindex.htmlを修正します。
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page1</title>
+  <script src="./components.js" defer></script>
+  <script src="./index1.js" defer></script>
+</head>
+<body>
+</body>
+</html>
+```
+index2.htmlも修正します。
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page1</title>
+  <script src="./components.js" defer></script>
+  <script src="./index2.js" defer></script>
+</head>
+<body>
+</body>
+</html>
+```
+index1.jsを作成します。
+```js
+const content = Header() + Paragraph("これはページ1です")
+
+body.insertAdjacentHTML('beforeend', content);
+```
+最後にindex2.jsを作成します。
+```js
+const content = Header() + Paragraph("これはページ2です")
+
+body.insertAdjacentHTML('beforeend', content);
+```
+
+このようにすることでコンポーネントを用いてページを作成することができます。
+
+ところでHeaderコンポーネントはページ1でもページ2でも使ってます。layout.jsというのを作成して、そこに下記を追加した上で、index.htmlとindex2.htmlのcomponents.jsの読み込み直後にlayout.jsを読み込むことで共通化もできますね。
+
+```js
+body.insertAdjacentHTML('beforeend', Header());
+```
+
+ここではJavaScriptでプログラミングの基本を学びました。Nuxtなどを導入することで、もっと簡単にコンポーネントを記述できるようになります。実際の書き方はまた別の機会に学びましょう！
