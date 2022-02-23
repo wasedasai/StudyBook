@@ -39,3 +39,9 @@ $ git push
 :warning: `base: develop <- compare: <BranchName>`になっていることを確認してください。
 
 :seven: 終わったらレビュー担当者に連絡してください。レビュー担当者は、必要な項目をすべてクリアしていると確認した段階で、マージします。
+
+
+## お疲れ様！！
+チーム開発の流れを知ることは開発の欠かせないことの一つです。頑張りましょう！
+
+![gif](https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif?cid=ecf05e47bhbdz7hr6xgdcp5nzgdokl0gbzm3qw4o1g6qsx5p&rid=giphy.gif&ct=g)
