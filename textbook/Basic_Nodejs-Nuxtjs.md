@@ -1,10 +1,5 @@
----
-title: Basic Node.js & Nuxt.js
-id: 4
----
-
-# Chapter4 Basic Node.js & Nuxt.js
-第四章では、Node.jsをインストールしながら、Nuxtを概観します。この章の最終ゴールは、早稲田祭2020のフロントエンドをあなたのブラウザで閲覧できるようにして、コードで遊べるようにすることです。
+# Basic Node.js & Nuxt.js
+この章では、Node.jsをインストールしながら、Nuxtを概観します。この章の最終ゴールは、早稲田祭2020のフロントエンドをあなたのブラウザで閲覧できるようにして、コードで遊べるようにすることです。
 
 ![chapter4](https://user-images.githubusercontent.com/65198192/132185160-53a1165c-62f2-4c5b-ab05-0ba85fe39dbc.png)
 
