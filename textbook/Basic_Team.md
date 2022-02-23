@@ -4,7 +4,7 @@
 
 :one: リポジトリのクローン
 ```bash
-$ git clone <URL>
+$ git clone <URL> <Directory>
 ```
 
 :two: VSCodeでターミナルを開いて現在いるブランチを確認します。
@@ -13,7 +13,7 @@ $ git branch
 # developと表示されればOKです。
 ```
 
-:three: ブランチを作成します。その次にGitHubにブランチを登録します。
+:three: ブランチを作成します。そしてGitHubにブランチを登録します。
 
 :warning: `<BranchName>`は、`akinori/create-header-component`、`akinori/create-top-page`や`akinori/add-logo-to-header-component`のように、自分の名前を入れた何をしようとしているのかパット見て分かるようなブランチ名にしてください。
 ```bash
@@ -25,7 +25,7 @@ $ git push -u origin <BranchName>
 
 :four: ある程度進むごとにコミットします。拡張機能のソース管理を開いて一つ一つプラスボタンを押下していきます。コミットするファイルを選択し終えたら、以下のコマンドを実行します。ダブルクオーテーションマークの中身は自分が何をしたのかをメッセージとして書いてください。
 ```bash
-$ git commit -m "mg"
+$ git commit -m ""
 ```
 
 :five: 作業が完了したら以下のコマンドを実行してください。
