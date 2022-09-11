@@ -34,7 +34,7 @@
 ### 新歓サイト
 ```mermaid
 flowchart 
-  Client-->
+  Client-->GitHub Pages
 ```
 
 ### 仮サイト
