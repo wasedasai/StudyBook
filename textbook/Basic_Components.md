@@ -173,6 +173,9 @@ footer {
 </style>
 ```
 
+## 第二節 コンポーネントを作成する
+[これ](https://webrandum.net/nuxt-component/)見ると良いです
+
 ## お疲れ様！！
 今年度のWebサイト作成頑張りましょう！
 
