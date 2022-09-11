@@ -51,12 +51,15 @@ flowchart
 ### 公式サイト
 ```mermaid
 flowchart 
-  Client<-->A[WEBサーバー:Nginx:80,443]
-  subgraph サーバー
-  A<-->|/*|FrontEnd:Nuxt.js:3000
-  A<-->|/api/*|B[Backend:Django:8000]
+  Client<-->|api.wasedasai.net|A[WEBサーバー:Nginx:80,443]
+  subgraph サーバー1
+  A<-->B[Backend:Django:8000]
   B<-->|CRUD|DB:SQLite3
   end
   B<-->|Search|全文検索:Algolia
+  Client<-->|wasedasai.net|C[WEBサーバー:Nginx:80,443]
+  subgraph サーバー2
+  C<-->FrontEnd:Nuxt.js:3000
+  end
 ```
-公式サイトはアクセス数の観点でレンタルサーバーで公開します。
+公式サイトはアクセス数の観点でレンタルサーバーで公開します。二つのサーバーで公開するのは、バックエンドサーバーが過負荷の場合にフロントエンドサーバー自体が表示できないといった問題を回避するためです。
