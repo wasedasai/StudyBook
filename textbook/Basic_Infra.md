@@ -31,6 +31,22 @@
 - コスト
 
 ## 第二節 チームのアーキテクチャ
+### 新歓サイト
+```mermaid
+flowchart 
+  Client-->
+```
+
+### 仮サイト
+```mermaid
+flowchart 
+  Client-->A[WEBサーバー:Nginx:80,443]
+  subgraph サーバー
+  A<-->|/*|静的ファイル群
+  end
+```
+
+### 公式サイト
 ```mermaid
 flowchart 
   Client-->A[WEBサーバー:Nginx:80,443]
