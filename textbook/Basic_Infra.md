@@ -32,10 +32,12 @@
 
 ## 第二節 チームのアーキテクチャ
 ```mermaid
-flowchart TD
-  Client-->A[WEBサーバー]
-  A-->|/*|FrontEnd
-  A-->|/api/*|B[Backend]
-    B-->|CRUD|DB
-    B-->|Search|全文検索
+flowchart 
+  Client-->A[WEBサーバー:Nginx]
+  subgraph サーバー
+  A-->|/*|FrontEnd:Nuxt.js
+  A-->|/api/*|B[Backend:Django]
+  B-->|CRUD|DB:SQLite3
+  end
+  B-->|Search|全文検索:Algolia
 ```
