@@ -34,13 +34,13 @@
 ### 新歓サイト
 ```mermaid
 flowchart 
-  Client-->GitHub Pages
+  Client<-->GitHubPages
 ```
 
 ### 仮サイト
 ```mermaid
 flowchart 
-  Client-->A[WEBサーバー:Nginx:80,443]
+  Client<-->A[WEBサーバー:Nginx:80,443]
   subgraph サーバー
   A<-->|/*|静的ファイル群
   end
@@ -49,7 +49,7 @@ flowchart
 ### 公式サイト
 ```mermaid
 flowchart 
-  Client-->A[WEBサーバー:Nginx:80,443]
+  Client<-->A[WEBサーバー:Nginx:80,443]
   subgraph サーバー
   A<-->|/*|FrontEnd:Nuxt.js:3000
   A<-->|/api/*|B[Backend:Django:8000]
