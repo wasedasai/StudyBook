@@ -33,11 +33,11 @@
 ## 第二節 チームのアーキテクチャ
 ```mermaid
 flowchart 
-  Client-->A[WEBサーバー:Nginx]
+  Client-->A[WEBサーバー:Nginx:80,443]
   subgraph サーバー
-  A-->|/*|FrontEnd:Nuxt.js
-  A-->|/api/*|B[Backend:Django]
-  B-->|CRUD|DB:SQLite3
+  A<-->|/*|FrontEnd:Nuxt.js:3000
+  A<-->|/api/*|B[Backend:Django:8000]
+  B<-->|CRUD|DB:SQLite3
   end
-  B-->|Search|全文検索:Algolia
+  B<-->|Search|全文検索:Algolia
 ```
