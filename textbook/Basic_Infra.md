@@ -34,7 +34,10 @@
 ### 新歓サイト
 ```mermaid
 flowchart 
-  Client<-->GitHubPages
+  Client<-->A[GitHubPages]
+  subgraph GitHub
+  A<-->静的ファイル群
+  end
 ```
 1日で数万アクセスに達する公式サイトと比較して新歓サイトは負荷が低いのでGitHub Pagesを用いて公開しています。
 
