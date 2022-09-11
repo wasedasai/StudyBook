@@ -29,3 +29,13 @@
 - 可用性
 - パフォーマンス
 - コスト
+
+## 第二節 チームのアーキテクチャ
+```mermaid
+flowchart TD
+  Client-->A[WEBサーバー]
+  A-->|/*|FrontEnd
+  A-->|/api/*|B[Backend]
+    B-->|CRUD|DB
+    B-->|Search|全文検索
+```
