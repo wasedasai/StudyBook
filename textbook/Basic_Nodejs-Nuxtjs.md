@@ -163,7 +163,7 @@ $ npm install -g yarn
 $ yarn -v
 ```
 
-:three: 第四章でインストールした`os2020-front`のインストールされた階層に`cd`コマンドを使って移動して、次のコマンドを実行します。（もしくはVSCodeで`os2020-front`を開いて、`Ctrl`を押しながら`@`キーを押下するとターミナルが使えます。Git Bashに変更して次のコマンドを実行します。変更方法はネットで探してください。）
+:three: プロジェクトをインストールした階層に`cd`コマンドを使って移動して、次のコマンドを実行します。（もしくはWindowsであればVSCodeでプロジェクトのフォルダーを開いて、VSCode最上部のバーにある「ターミナル」から「新しいターミナル」をクリックしてください。Git Bashに変更して次のコマンドを実行します。[変更方法](https://www.javadrive.jp/vscode/terminal/index2.html#section2)）
 
 パッケージをたくさんインストールするので時間がかかります。待ちましょう。
 ```bash
@@ -179,7 +179,7 @@ $ yarn dev
 ```
 
 ## お疲れ様！！
-2020年度のサイトが表示されたら完了です！
+プロジェクトのサイトが表示されたら完了です！
 これで環境構築も終わりです。次回はチーム開発の基本と流れ、コンポーネント指向を学び、今年度のリポジトリに貢献する準備をします。
 
 ![gif](https://media.giphy.com/media/3o7abB06u9bNzA8lu8/giphy.gif?cid=ecf05e47bhbdz7hr6xgdcp5nzgdokl0gbzm3qw4o1g6qsx5p&rid=giphy.gif&ct=g)
