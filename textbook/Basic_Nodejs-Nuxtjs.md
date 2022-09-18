@@ -1,5 +1,5 @@
 # Basic Node.js & Nuxt.js
-この章では、Node.jsをインストールしながら、Nuxtを概観します。この章の最終ゴールは、早稲田祭2020のフロントエンドをあなたのブラウザで閲覧できるようにして、コードで遊べるようにすることです。
+この章では、Node.jsをインストールしながら、Nuxtを概観します。この章の最終ゴールは、早稲田祭のフロントエンドをあなたのブラウザで閲覧できるようにして、コードで遊べるようにすることです。
 
 ![chapter4](https://user-images.githubusercontent.com/65198192/132185160-53a1165c-62f2-4c5b-ab05-0ba85fe39dbc.png)
 
@@ -151,7 +151,7 @@ $ nodenv global <Version>
 
 :warning:CUIはGit Bashを使ってください。`Windows`キーを押下して、`Git Bash`と入力してエンターすればGit Bashが開かれます・
 
-## 第五節 os2020-frotをブラウザで見よう
+## 第五節 ブラウザで見よう
 :one: ターミナル/Git Bashを開いて、`npm`のバージョンを確認します。表示されることが重要で、チームで完全に同じである必要はないです。
 ```bash
 $ npm -v
