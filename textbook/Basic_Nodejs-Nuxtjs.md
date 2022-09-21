@@ -79,7 +79,7 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 ```
 `ESC`キー押下してノーマルモードに戻ります。次に`:wq`を順に押して保存します。
 
-:four: nodebrewのパスを通します
+:four: nodebrewのパスを通します。※zshを使っている場合は`~/.zshrc`になります。
 ```bash
 $ source ~/.bash_profile
 $ nodebrew setup
