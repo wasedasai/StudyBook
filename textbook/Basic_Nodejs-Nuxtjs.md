@@ -49,7 +49,7 @@ MacとWindowsでインストール方法が異なります。いずれの方法�
 
 ### :dizzy:MacOS
 MacOSでnode.jsをインストールする方法は二つあります。
-#### :sparkles:NodebrewでNode.jsをインストールする
+#### :sparkles:一つ目の方法：NodebrewでNode.jsをインストールする
 MacではNode.jsのバージョンを管理するためにHomebrewとnodebrewを使います。
 
 :one: ターミナルに貼り付けてエンター、`PRESS RETURN ~~`が出てきたらエンター押します。Installが始まるので待ちます。
@@ -94,7 +94,7 @@ $ nodebrew use v<Version>
 $ node -v
 ```
 
-#### :sparkles:NodenvでNode.jsをインストールする
+#### :sparkles:二つ目の方法：NodenvでNode.jsをインストールする
 :one: nodenvをインストールします。
 ```bash
 $ git clone git://github.com/nodenv/nodenv.git ~/.nodenv
