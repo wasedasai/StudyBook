@@ -63,6 +63,7 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 $ brew install nodebrew
 $ nodebrew -v
 ```
+`brew install nodebrew`実行時に`zsh: command not found: brew`が表示された場合は[これ](https://stackoverflow.com/questions/36657321/after-installing-homebrew-i-get-zsh-command-not-found-brew)を参考にします
 
 :three: nodebrewのパスを通す準備にします。
 - bashを使っている場合
