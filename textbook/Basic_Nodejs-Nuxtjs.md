@@ -53,6 +53,7 @@ MacOSでnode.jsをインストールする方法は二つあります。
 MacではNode.jsのバージョンを管理するためにHomebrewとnodebrewを使います。
 
 :one: ターミナルに貼り付けてエンター、`PRESS RETURN ~~`が出てきたらエンター押します。Installが始まるので待ちます。
+:warning:passwordが聞かれる場合はPCのパスワードを入力してください。※打ち込んだパスワードは表示されない仕様です。
 ```bash
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
