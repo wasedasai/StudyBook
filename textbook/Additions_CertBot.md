@@ -1,4 +1,4 @@
-# SSL証明書の発行・更新
+# Infra
 
 ## SSL証明書取得
 ```
@@ -10,6 +10,15 @@ sudo certbot --nginx -d api.wasedasai.net
 systemctl stop nginx
 systemctl status nginx
 certbot renew
+systemctl start nginx
+systemctl status nginx
+```
+
+
+## Nginx更新
+```
+systemctl stop nginx
+systemctl status nginx
 systemctl start nginx
 systemctl status nginx
 ```
