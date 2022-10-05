@@ -22,3 +22,11 @@ systemctl status nginx
 systemctl start nginx
 systemctl status nginx
 ```
+
+## OS2022-frontの更新
+```
+cd /var/os2022-frontend
+git pull
+yarn build
+pm2 restart frontend
+```
