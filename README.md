@@ -14,7 +14,7 @@ Webチームで学ぶことを心をこめて書いたレポジトリ
 ## 資料
 - [ブランチなしのレビュー方法](https://github.com/wasedasai/StudyBook/blob/main/textbook/Additions_Review-Without-Branches.md)
 - [Nodistのアンインストール](https://github.com/wasedasai/StudyBook/blob/main/textbook/Additions_GoodbyeNodist.md)
-- [HTTPS対応](https://github.com/wasedasai/StudyBook/blob/main/textbook/Additions_CertBot.md)
+- [インフラ&デプロイ](https://github.com/wasedasai/StudyBook/blob/main/textbook/Additions_Infra.md)
 
 ## ロードマップ
 WEBチームで学習しなければならない項目は非常に多いです。ここでは、設計、デザイン、フロントエンド、バックエンド、インフラの分野について学ぶべき項目を記載します。
