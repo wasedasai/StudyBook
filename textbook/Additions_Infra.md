@@ -44,16 +44,7 @@ pm2 list
 ```
 
 ## PM2関連
-### PM2のモニター
-```
-pm2 monit
-```
-### PM2の同期処理
-```
-pm2 save
-```
-### PM2のデーモン
-```
-pm2 startup
-```
+- PM2のモニター `pm2 monit`
+- PM2の同期処理 `pm2 save`
+- PM2のデーモン `pm2 startup`
 
