@@ -69,6 +69,9 @@ IS_TEST_FRONTEND=true
 IS_LOCAL=true
 ```
 
+### 画像をstaticに保存する
+FileZillaを使いましょ
+
 ### リリース
 ```
 yarn install
