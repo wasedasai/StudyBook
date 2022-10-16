@@ -46,8 +46,13 @@ pm2 list
 ## 環境構築test-frontend
 ### [Nodeセットアップ](https://www.server-world.info/query?os=CentOS_Stream_8&p=nodejs&f=10)
 
-### npmとyarn
+### npmとyarnインストール
 これはStudyBookの別の章
+
+### PM2インストール
+```
+npm i -g pm2 
+```
 
 ### Clone
 ```
@@ -55,6 +60,21 @@ cd /var
 mkdir test-frontend
 cd test-frontend
 git clone ~ .
+```
+
+### 環境変数設定
+`vi .env`で環境変数を設定する
+```
+IS_TEST_FRONTEND=true
+IS_LOCAL=true
+```
+
+### リリース
+```
+yarn install
+yarn build
+pm2 start ecosystem.config.js
+pm2 save
 ```
 
 ## PM2関連
