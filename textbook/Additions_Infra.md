@@ -43,6 +43,20 @@ pm2 save
 pm2 list
 ```
 
+## 環境構築test-frontend
+### [Nodeセットアップ](https://www.server-world.info/query?os=CentOS_Stream_8&p=nodejs&f=10)
+
+### npmとyarn
+これはStudyBookの別の章
+
+### Clone
+```
+cd /var
+mkdir test-frontend
+cd test-frontend
+git clone ~ .
+```
+
 ## PM2関連
 - PM2のモニター `pm2 monit`
 - PM2の同期処理 `pm2 save`
