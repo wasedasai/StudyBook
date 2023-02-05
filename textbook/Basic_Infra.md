@@ -53,7 +53,7 @@ flowchart
 
 ### 公式サイト
 - フロントエンド：Node.js, PM2, CertBot
-- バックエンド：Python, CertBot
+- バックエンド：Python, gunicorn, CertBot
 
 ```mermaid
 flowchart 
