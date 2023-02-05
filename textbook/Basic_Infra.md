@@ -58,13 +58,13 @@ flowchart
 ```mermaid
 flowchart 
   Client<-->|api.wasedasai.net|A[WEBサーバー:Nginx:80,443]
-  subgraph サーバー1(OS: CentOS)
+  subgraph サーバー1 OS: CentOS
   A<-->B[Backend:Django:8000]
   B<-->|CRUD|DB:SQLite3
   end
   B<-->|Search|全文検索:Algolia
   Client<-->|wasedasai.net|C[WEBサーバー:Nginx:80,443]
-  subgraph サーバー2(OS: Ubuntu)
+  subgraph サーバー2 OS: Ubuntu
   C<-->FrontEnd:Nuxt.js:3000
   end
 ```
