@@ -52,7 +52,7 @@ flowchart
 仮サイトはアクセス数の観点でレンタルサーバーで公開します。
 
 ### 公式サイト
-- フロントエンド：Node.js, CertBot
+- フロントエンド：Node.js, PM2, CertBot
 - バックエンド：Python, CertBot
 
 ```mermaid
